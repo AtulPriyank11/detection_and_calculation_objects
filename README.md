@@ -11,3 +11,9 @@ This Python script utilizes Detectron2, a powerful library for object detection,
 ```bash
 git clone https://github.com/your/repository.git
 cd repository
+```
+
+```bash
+pip install -m requirements.txt
+```
+
