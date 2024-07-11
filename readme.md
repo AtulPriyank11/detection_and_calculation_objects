@@ -7,7 +7,7 @@ To run the script, ensure you have Python installed (preferably Python 3.6+) and
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your/repository.git
+git clone https://github.com/AtulPriyank11/detection_and_calculation_objects.git
 cd repository
 ```
 
