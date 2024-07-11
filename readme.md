@@ -70,5 +70,3 @@ Handling Additional Shapes: The script can be extended to handle various object 
 The script can be expected to handle various object shapes beyond rectangles, such as circles or irregular polygons, by adapting contour detection and area calculation methods.
 
 Challenges like tilted objects or complex shapes can impact accurate contour detection and area calculation. Robust algorithms and additional preprocessing steps may be required to handle these scenarios effectively.
-
-## Sample Output
