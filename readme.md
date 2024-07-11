@@ -29,43 +29,68 @@ This command installs Detectron2 at a specific commit (5aeb252b194b93dc2879b4ac3
 4. Downloading model weights:
 This is a crucial step. But I have made it easy. You don't need to download the weights instead when you the actual script, it will automatically download the weights.
 
-## Approach
-# Object Detection
+5. Approach
+### Object Detection
 * The script preprocesses the input image, converts it to RGB format, and applies edge detection using Canny.
 * Using a pre-trained Mask R-CNN model configured with Detectron2, objects in the image are detected and segmented.
 
-# Surface Area Calculation
+### Surface Area Calculation
 
 *  A reference object of known size is identified from the image using contours to establish a pixel-to-centimeter conversion ratio (pixel_per_cm).
 * For each detected object, the script calculates its area in square centimeters based on the established pixel_per_cm ratio and annotates the result on the image.
 
-# Assumptions
+### Assumptions
 * Object Type: The script assumes objects are planar (flat) and lying horizontally on a surface for accurate area calculation.
 * Reference Object: A known-sized reference object must be visible in the image to establish the pixel_per_cm ratio accurately.
 
-# Output Format
+### Output Format
 
 The script outputs an annotated image displaying detected objects with their corresponding surface area annotated. Each object is categorized as "Small Object," "Medium Object," or "Large Object" based on its computed area.
 
-# Functionality
+6. How it works
+
+### Preprocessing:
+
+* Reads the input image and converts it from BGR to RGB format for compatibility with Detectron2.
+
+### Object Detection:
+
+* Utilizes Detectron2's pre-trained Mask R-CNN model configured with the COCO dataset. The model predicts object instances and provides masks, bounding boxes, and confidence scores for each object.
+
+### Area Calculation:
+
+*  Calculates the surface area of each detected object based on the pixel area derived from the predicted mask and a configurable conversion ratio (RATIO_PIXEL_TO_CM).
+
+### Visualization:
+
+*  Applies colored masks to highlight each detected object on the original image.
+*  Draws bounding boxes and annotates each object with its calculated surface area and category.
+
+### Scale Calibration:
+
+* Determines the scale of the image using a reference object with a known size. This calibration ensures accurate conversion from pixel areas to real-world units (square centimeters).
+
+7. Discoveries
+
+### Functionality
 
 1. Object Detection: The script effectively utilizes detectron's Mask R-CNN to detect and segment objects, achieving accurate results.
 2. Area Calculation: Surface areas are calculated precisely based on the established pixel-to-centimeter ratio.
 
-# Clarity and Readability
+### Clarity and Readability
 
 The code is well-structured, with modular functions and detailed comments explaining each step and the rationale behind calculations.
 
-# Efficiency
+### Efficiency
 
 The script efficiently preprocesses images, performs object detection, and calculates areas using optimized libraries like Detectron2 and OpenCV.
 
-# Documentation
+### Documentation
 
 A comprehensive README file accompanies the script, providing installation instructions, approach, assumptions, output format, and evaluation criteria.
 Handling Additional Shapes: The script can be extended to handle various object shapes beyond rectangles, such as circles or irregular polygons, by adapting contour detection and area calculation methods.
     
-## Challenges and Considerations 
+### Challenges and Considerations 
 
 The script can be expected to handle various object shapes beyond rectangles, such as circles or irregular polygons, by adapting contour detection and area calculation methods.
 
