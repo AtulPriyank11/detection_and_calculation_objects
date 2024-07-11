@@ -29,7 +29,9 @@ This command installs Detectron2 at a specific commit (5aeb252b194b93dc2879b4ac3
 4. Downloading model weights:
 This is a crucial step. But I have made it easy. You don't need to download the weights instead when you the actual script, it will automatically download the weights.
 
-5. Approach
+5. Approach:
+
+
 ### Object Detection
 * The script preprocesses the input image, converts it to RGB format, and applies edge detection using Canny.
 * Using a pre-trained Mask R-CNN model configured with Detectron2, objects in the image are detected and segmented.
@@ -47,7 +49,8 @@ This is a crucial step. But I have made it easy. You don't need to download the 
 
 The script outputs an annotated image displaying detected objects with their corresponding surface area annotated. Each object is categorized as "Small Object," "Medium Object," or "Large Object" based on its computed area.
 
-6. How it works
+6. How it works:
+
 
 ### Preprocessing:
 
@@ -70,7 +73,8 @@ The script outputs an annotated image displaying detected objects with their cor
 
 * Determines the scale of the image using a reference object with a known size. This calibration ensures accurate conversion from pixel areas to real-world units (square centimeters).
 
-7. Discoveries
+7. Discoveries:
+   
 
 ### Functionality
 
