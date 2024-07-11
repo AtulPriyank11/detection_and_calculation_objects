@@ -73,6 +73,9 @@ The script outputs an annotated image displaying detected objects with their cor
 
 * Determines the scale of the image using a reference object with a known size. This calibration ensures accurate conversion from pixel areas to real-world units (square centimeters).
 
+### Test using any image:
+* Provide an image in image_path where the image must have flat object/objects for simplicity. Otherwise, you can also test for yourself with different shapes of the object/objects present in an image
+
 7. Discoveries:
    
 
