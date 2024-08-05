@@ -1,6 +1,6 @@
 # Object Detection and Surface Area Calculation using Detectron2 and OpenCV
 
-This Python script utilizes Detectron2, a powerful library for object detection, to identify and measure the surface area of objects in images. It employs Mask R-CNN (Region-based Convolutional Neural Network) for accurate instance segmentation and calculates the area based on known pixel-to-centimeter ratios.
+This Python script utilizes Detectron2, a powerful library for object detection, to identify and measure the surface area of objects in images. It employs Faster R-CNN (Region-based Convolutional Neural Network) for accurate instance segmentation and calculates the area based on known pixel-to-centimeter ratios.
 Installation
 
 To run the script, ensure you have Python installed (preferably Python 3.6+) and follow these steps:
